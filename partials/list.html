@@ -1,0 +1,11 @@
+<div class="center-piece">
+	<ul class="todo-list">
+		<li ng-click="editTask($index)" ng-repeat="task in list">
+			<input type="checkbox" ng-model="task.completed">	
+			<a class="task" href="#/task">{{ task.task }}</a> 
+		</li> 
+	</ul>
+	<div class="text-center">
+		<button ng-click="addTask()">Add Task</button>
+	</div>
+</div>
