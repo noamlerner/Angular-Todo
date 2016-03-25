@@ -1,4 +1,5 @@
-todo.controller('TodoCtrl', ['$scope','$location', 'TodoListFactory', 
+var ctrls = angular.module('TodoCtrls', ['LFactory']);
+ctrls.controller('TodoCtrl', ['$scope','$location', 'TodoListFactory', 
 	function ($scope,$location, todoListFactory) {
 		$scope.list = todoListFactory.getList();
 		$scope.editTask = function(index){
@@ -13,10 +14,11 @@ todo.controller('TodoCtrl', ['$scope','$location', 'TodoListFactory',
 			 $location.path('/task');
 		}
 }]);
-todo.controller('TaskCtrl', ['$scope', '$location', 'TodoListFactory', 
+
+ctrls.controller('TaskCtrl', ['$scope', '$location', 'TodoListFactory', 
 	function ($scope, $location, todoListFactory) {
 		$scope.task = todoListFactory.getList()[todoListFactory.index];
 		$scope.goBack = function(){
 			$location.path('/list')
 		}
-}])
+}]);
