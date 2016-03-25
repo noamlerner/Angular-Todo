@@ -2,6 +2,7 @@ body{
 	background-color: #3498db;
 	font-family: 'Roboto', sans-serif;
 	color:#ecf0f1;
+    overflow: hidden;
 }
 h1{
 	font-size:66px;
@@ -12,9 +13,10 @@ h1{
 .center-piece {
     height: 741px;
     width: 633px;
-    border: white solid;
+    border: white solid 5px;
     margin: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
+    border-radius:32px;
 }
 .todo-list {
     width: 300px;

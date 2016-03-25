@@ -13,7 +13,4 @@ todo.config(['$routeProvider',
       otherwise({
         redirectTo: '/list'
       });
-  }]);
-
-
-
+}]);
